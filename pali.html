@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+</head>
+<body>
+    <h1>Palindrome Checker</h1>
+    <p id="result"></p>
+    
+    <script>
+        function isPalindrome(str) {
+           
+            const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+            
+            return cleanedStr === cleanedStr.split('').reverse().join('');
+        }
+
+        
+        const testStr1 = "A man, a plan, a canal: Panama";
+        const testStr2 = "race a car";
+
+        document.getElementById('result').innerHTML = `
+            Is "${testStr1}" a palindrome? ${isPalindrome(testStr1)}<br>
+            Is "${testStr2}" a palindrome? ${isPalindrome(testStr2)}
+        `;
+    </script>
+</body>
+</html>

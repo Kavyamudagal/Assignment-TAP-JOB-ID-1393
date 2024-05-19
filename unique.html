@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Values</title>
+</head>
+<body>
+    <h1>Unique Values in an Array</h1>
+    <p id="result"></p>
+
+    <script>
+        function uniqueValues(arr) {
+            const uniqueSet = new Set(arr);
+            return Array.from(uniqueSet);
+        }
+
+       
+        const numbers = [1, 2, 2, 3, 4, 4, 5];
+        const uniqueNumbers = uniqueValues(numbers);
+        
+        document.getElementById('result').innerText = `Unique values: ${uniqueNumbers.join(', ')}`;
+    </script>
+</body>
+</html>
